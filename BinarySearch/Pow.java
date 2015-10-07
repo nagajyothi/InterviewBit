@@ -32,7 +32,7 @@ public class Pow{
         return result;
     }
     
-    //Efficient approach
+    //Efficient approach but did not consider big integers
     public static int powBetter(int x, int n, int d) {
         if(x == 0)
             return 0;
@@ -69,6 +69,8 @@ public class Pow{
         
         return result < 0 ? (result + d) % d : result;
     }
+    
+    
     public static int powSolution(int x, int n, int d) {
         System.out.println("Entering function");
      return BigInteger.valueOf(x).modPow(BigInteger.valueOf(n),BigInteger.valueOf(d)).intValue();
@@ -80,6 +82,7 @@ public class Pow{
         int result = powSolution(x, n, d);
         
         System.out.println(result);
-        
+        System.out.println(powBetter(x, n, d));
+        System.out.println(pow(x, n, d));
     }
 }

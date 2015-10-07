@@ -14,8 +14,6 @@ public class LSZero{
     public static ArrayList<Integer> lszero(ArrayList<Integer> A) {
         ArrayList<Integer> result = new ArrayList<Integer>();
         HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
-//        int[] sum = new int[A.size() + 1];
-//        sum[0] = 0;
         map.put(0, -1);
         int start = -1;
         int end = -1;
@@ -23,13 +21,7 @@ public class LSZero{
         int maxLength  = Integer.MIN_VALUE;
         for(int i = 0; i < A.size(); i++){
             sum += A.get(i);
-//            if(sum[i+1] == 0 && maxLength == Integer.MIN_VALUE){
-//                start = 0;
-//                end = i;
-//                maxLength = Math.max(maxLength, (end - start));
-//                //break;
-//                
-//            }
+
             if(map.get(sum) != null){
                 if(maxLength <= (i - map.get(sum))){
                     start = map.get(sum) + 1;
@@ -44,10 +36,7 @@ public class LSZero{
             else
                 map.put(sum, i);
         }
-//        System.out.print(" ");
-//        for(int i = 0; i < sum.length; i++)
-//            System.out.print(sum[i] + ", ");
-//        System.out.println();
+
         if(start >= 0 && end >= 0){
             for(int i = start; i <= end; i++){
                 result.add(A.get(i));

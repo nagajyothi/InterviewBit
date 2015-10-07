@@ -16,7 +16,7 @@ public class RevWord{
         if(a == null || a.length() == 0)
             return "";
         StringBuilder result = new StringBuilder();
-        String[] arr = a.split(" " );
+        String[] arr = a.split(" ");
         for(int i = arr.length - 1; i >= 0; i--){
             if(!arr[i].equals("")){
                 result.append(arr[i]).append(" ");

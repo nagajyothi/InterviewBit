@@ -33,7 +33,7 @@ public class Histogram{
             }
             else {
                 //if(a.get(i) < a.get(stack.peek())){
-                top = stack.peek();
+                top = stack.peek(); // height
                 stack.pop();
                 areaWithTop = a.get(top) * (stack.isEmpty() ? i : i - stack.peek() - 1);
                 System.out.println("\t Area of the Top " +  areaWithTop);

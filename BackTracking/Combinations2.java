@@ -35,11 +35,6 @@ public class Combinations2{
         ArrayList<Integer> currentList = new ArrayList<Integer>();
         HashSet<ArrayList<Integer>> set = new  HashSet<ArrayList<Integer>>();
         combinationSum(a, b, 0, currentList, result, set);
-//        for(int i = 0;  i < result.size(); i++){
-//            ArrayList<Intger> temp = result.get(i);
-//            for(int j : temp)
-//                
-//        }
            
         return result;
     }

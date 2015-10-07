@@ -51,7 +51,7 @@ public class Rank {
     {
         int i;
         
-        for( i = 0; ; ++i )
+        for( i = 0; str[i] >= 'a' && str[i] <= 'z' ; ++i )
             ++count[ str[i] ];
         
         for( i = 1; i < 256; ++i )
@@ -96,7 +96,7 @@ public class Rank {
     }
     
     public static void main(String[] args) {
-        String A = "ZCSFLVHXRYJQKWABGT";
+        String A = "aab";
         System.out.println(findRank(A.toCharArray()));
     }
 }

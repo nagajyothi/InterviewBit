@@ -23,6 +23,7 @@ public class ReverseLinkedList{
                 second.next = p.next;
                 p.next = null;
             }
+            p = p.next;
         }
         
         if(first.next == null)

@@ -34,6 +34,7 @@ public class LongestIncreasingSequence{
         /* Recursively get all LIS ending with arr[0], arr[1] ... ar[n-2]. If 
        arr[i-1] is smaller than arr[n-1], and max ending with arr[n-1] needs
        to be updated, then update it */
+        
         for(int i =1; i < n; i++){
             res = lis(a, i, max);
             if(a.get(i-1) < a.get(n-1) && res + 1 > maxEndingHere)

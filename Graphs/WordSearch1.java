@@ -34,7 +34,7 @@ public class WordSearch1{
         if(board[i][j] == word.charAt(k)){
             char temp = board[i][j];
             board[i][j]='#';
-            if(k==word.length()-1){
+            if(k == word.length()-1){
                 return true;
             }else if(dfs(board, word, i-1, j, k+1)
                          ||dfs(board, word, i+1, j, k+1)

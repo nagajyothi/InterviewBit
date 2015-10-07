@@ -26,7 +26,7 @@
 import java.util.*;
 public class LCP{
     public static String longestCommonPrefix(ArrayList<String> A) {
-        StringBuilder result = new StringBuilder();
+
         int minLen = Integer.MAX_VALUE;
         
         for(int i = 0; i < A.size()-1; i++){
