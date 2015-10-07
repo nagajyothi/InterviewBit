@@ -18,36 +18,37 @@ public class RemoveDuplicates{
         for(int i = 0; i < a.size(); i++)
             System.out.print(a.get(i) + " ");
         System.out.println();
-        int index = 0;
-//        for(int i = 1; i < a.size(); i++){            
-//            if(!a.get(i).equals(a.get(index))){
-//                index++;
-//                a.set(index, a.get(i));
-//            }            
-//        }
-        for(int i = 0; i < a.size()-1; i++){
-            if(a.get(i).equals(a.get(i+1))){
-                a.remove(i);
-                i--;
-            }
+        int index = 1;
+        for(int i = 1; i < a.size(); i++){            
+            if(!a.get(i).equals(a.get(i-1))){
+               
+                a.set(index, a.get(i));
+                 index++;
+            }            
         }
+//        for(int i = 0; i < a.size()-1; i++){
+//            if(a.get(i).equals(a.get(i+1))){
+//                a.remove(i);
+//                i--;
+//            }
+//        }
         for(int i = 0; i < a.size(); i++)
             System.out.print(a.get(i) + " ");
         System.out.println();
-        return index+1;
+        return index;
         
     }
     public static void main(String[] args){
         ArrayList<Integer> a = new  ArrayList<Integer>();
-//        a.add(1);
-//        a.add(2);
-//        a.add(0);
-//        a.add(0);
-//        a.add(2);
-//        a.add(1);
-//        a.add(2);
-//        a.add(0);
-//        a.add(1);
+        a.add(1);
+        a.add(2);
+        a.add(0);
+        a.add(0);
+        a.add(2);
+        a.add(1);
+        a.add(2);
+        a.add(0);
+        a.add(1);
         a.add(5000);
         a.add(5000);
         a.add(5000);

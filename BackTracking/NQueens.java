@@ -19,6 +19,16 @@ There exist two distinct solutions to the 4-queens puzzle:
   "...Q",
   ".Q.."]
 ]
+
+Unfortunately, there is no magic trick to solving this problem. This is more of a bruteforce problem. A more intelligent bruteforce.
+
+Notes : 
+1) There can exactly be one queen per row. Otherwise the 2 queens in the row would collide. If you miss out on a row, there cannot be N queens on the board. 
+2) Every column needs to have exactly one queen. 
+3) The left diagonal cannot have more than one queen ( Unique (row + col) )
+4) The right diagonal cannot have more thna one queen ( Unique (row - col) )
+
+We can start placing a queen per row. When placing a queen on a row, col, we need to check if the position is available based on what we have already placed. Then we move to the next row.
  */
 import java.util.*;
 public class NQueens{

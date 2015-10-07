@@ -15,9 +15,8 @@
 import java.util.*;
 public class RemElm{
     public static int removeElement(ArrayList<Integer> a, int b) {
-        for(int i = 0; i < a.size(); i++)
-            System.out.print(a.get(i) + " ");
-        System.out.println();
+        
+        System.out.println(a);
         int n = a.size();
         if(a == null || n == 0)
             return 0;
@@ -29,8 +28,8 @@ public class RemElm{
             }
         }
         
-        for(int i = 0; i < a.size(); i++)
-            System.out.print(a.get(i) + " ");
+       
+            System.out.println(a);
         return start;
     }
     
@@ -54,6 +53,6 @@ public class RemElm{
         a.add(2);
         a.add(0);
         a.add(1);
-        System.out.println(removeElementSolution(a,1));
+        System.out.println(removeElement(a,1));
     }
 }

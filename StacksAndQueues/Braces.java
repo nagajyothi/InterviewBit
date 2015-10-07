@@ -73,7 +73,8 @@ public class Braces{
             char c = str.charAt(index); 
             if(c == '(' || c == '+' || c == '-' || c == '*' || c == '/'){ 
                 stack.push(c); 
-            } else if(c == ')'){ 
+            } 
+            else if(c == ')'){ 
                 if(stack.peek() == '('){ 
                     return 1; 
                 } else{ 

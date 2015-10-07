@@ -24,12 +24,6 @@ public class MaxRectangle{
         int i, j;
         int[][] s = new int[m][n];
         
-//        for(i = 0; i < m; i++)
-//            s[i][0] = a.get(i).get(0);
-//        
-//        for(j = 0; j < n; j++)
-//            s[0][j] = a.get(0).get(j);
-        
         for(i = 0; i < m; i++){
             for(j = 0; j < n; j++){
                 if(a.get(i).get(j) == 1)

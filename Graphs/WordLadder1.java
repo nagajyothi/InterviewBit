@@ -20,6 +20,8 @@
  Return 0 if there is no such transformation sequence.
  All words have the same length.
  All words contain only lowercase alphabetic characters.
+ 
+ http://www.programcreek.com/2012/12/leetcode-word-ladder/
  */
 import java.util.*;
 public class WordLadder1{
