@@ -44,15 +44,16 @@ public class CoinChange2 {
         for(i = 0 ; i < n; i++)
             dp[0][i] = 1;
         for(i = 1; i < b+1; i++) {
-            for(j = 0; j < n; j++) {                
-//count solutions including a.get(j);
+            for(j = 0; j < n; j++) {     
+                
+               //count solutions including a.get(j);
                 int num = a.get(j);
                 if(i - num >= 0)
                     x = dp[i - num][j];
                 else
                     x = 0;
                 
-//count solutions excluding a.get(j);                
+                //count solutions excluding a.get(j);                
                 y = (j >= 1)? dp[i][j-1]: 0;
                 
                 dp[i][j] = x + y;
