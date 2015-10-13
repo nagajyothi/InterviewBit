@@ -29,10 +29,8 @@ public class RomanToInt{
             else{
                 result += c2n(a.charAt(i));
             }
-
         }
-        return result;
-        
+        return result;        
     }
     public static void main(String[] args){
         String a = args[0];

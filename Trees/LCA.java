@@ -68,7 +68,7 @@ public class LCA{
         if( node == null)
             return null;
         if(node.val == val1 || node.val == val2)
-            return a;
+            return node;
         
         TreeNode leftLCA = findLCA(node.left, val1, val2);
         TreeNode rightLCA = findLCA(node.right, val1, val2);
