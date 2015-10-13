@@ -7,7 +7,7 @@ public class LevelOrderTraversal {
         int val;
     }
     public ArrayList<ArrayList<Integer>> traverse(TreeNode a){
-        Queue<TreeNode> queue = new Queue<TreeNode>();
+        Queue<TreeNode> queue = new LinkedList<TreeNode>();
         ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
         
         if(a == null) return result;
