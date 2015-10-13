@@ -16,7 +16,8 @@ public class Merge{
          else{
              p.next = b;
              b = b.next;
-         }p = p.next;
+         }
+         p = p.next;
      }
      if(a != null) p.next = a;
      if(b != null) p.next = b;
