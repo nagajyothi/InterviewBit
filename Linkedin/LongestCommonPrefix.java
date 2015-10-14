@@ -26,7 +26,7 @@ public class LongestCommonPrefix {
         return strs[0].substring(0, minLen);
     }
     
-    public String longestCommonPrefix(String[] strs) {
+    public static String longestCommonPrefixEfficient(String[] strs) {
         if(strs.length==0) return "";
         String minStr=strs[0];
         
@@ -47,7 +47,8 @@ public class LongestCommonPrefix {
         return minStr.substring(0,end);
     }
     public static void main(String[] args) {
-        String[] strs = {"flower","flow", "fle", "fleet"};
+        String[] strs = {"flower","flow", "flew", "fleet"};
         System.out.println(longestCommonPrefix(strs));
+        System.out.println(longestCommonPrefixEfficient(strs));
     }
 }
