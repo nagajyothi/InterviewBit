@@ -34,7 +34,7 @@ public class KthSmallestElement {
     public static int findKthSmallestHelper(int[] a, int k, int lo, int hi) {
         if(k > 0 && k <= hi - lo + 1) {
             int pos = partition(a, lo, hi);
-            if(pos - lo == k -1) {
+            if(pos - lo == k - 1) {
                 return a[pos];
             }
             if(pos - lo  > k - 1) {

@@ -94,17 +94,19 @@ public class MedianArray{
     public static double getMedian(final List<Integer> a, final List<Integer> b){
         int m = a.size();
         int n = b.size();
-        if(a.get(n-1) < b.get(0))
-            return (double)(a.get(n-1) + b.get(0))/2;
-        if(b.get(m-1) < a.get(0))
-            return (double)(b.get(m-1) + a.get(0))/2;
+        System.out.println("A : " + a);
+        System.out.println("B : " + b);
+//        if(a.get(m-1) < b.get(0))
+//            return (double)(a.get(n-1) + b.get(0))/2;
+//        if(b.get(n-1) < a.get(0))
+//            return (double)(b.get(m-1) + a.get(0))/2;
         return getMedianRec(a, b, 0, m-1, n);
         
     }
     private static double getMedianRec(List<Integer> a, List<Integer> b, int left, int right, int n){
         int i, j;
         if(left > right)
-            return getMedianRec(b, a, 0, n-1, a.size());
+            return getMedianRec(b, a, 0, n-1, a.size()-1);
         
         i = (left + right)/2;
         j = n - i - 1;
@@ -175,6 +177,41 @@ public class MedianArray{
         }
         return median;
     }
+    
+    
+    //Using divide and conquer: http://www.geeksforgeeks.org/median-of-two-sorted-arrays/
+    public static double getMedianDC(final List<Integer> a, final List<Integer> b) {
+        double m1 = 0; // median of a
+        double m2 = 0; // median of b
+        int m = a.size();
+        int n = b.size();
+        
+        if(m == 1 && n == 1) {
+            return (a.get(0) + b.get(0)) / 2;
+        }
+        if(m == 2 && n == 2) {
+            return (Math.max(a.get(0) + b.get(0)) + Math.min(a.get(1), b.get(1))) / 2;
+        }
+        
+        m1 = median(a);
+        m2 = median(b);
+        if(m1 == m2) {
+            return m1;
+        }
+        //if m1 < m2 then median must exist in ar1[m1....] and ar2[....m2]
+        if(m1 < m2) {
+            return getMedian(
+        }
+    }
+    
+    public static double median(final List<Integer> a) {
+        int n = a.size();
+        if(n % 2 == 0) {
+            return (a.get(n/2) + a.get(n/2 - 1)) / 2;            
+        }
+        return a.get(n/2);
+    }
+    
     public static void main(String[] args){
         List<Integer> a = new ArrayList<Integer>();
         List<Integer> b = new ArrayList<Integer>();
@@ -184,7 +221,7 @@ public class MedianArray{
         
         b.add(2);
         b.add(3);
-        
+        //getMedian(a,b);
         System.out.println(getMedian(a,b));
     }
 }
