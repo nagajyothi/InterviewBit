@@ -14,7 +14,7 @@ public class FibSum {
     int[] fib;
     public static int fibsum(int n) {
         if(n <= 2)
-            return 2;
+            return 1;
         int a = 1;
         int b = 1;
         int c = 1;
