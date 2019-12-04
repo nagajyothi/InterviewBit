@@ -75,7 +75,7 @@ public static ArrayList<Integer> findSubstring(String a, final List<String> b) {
     }
 }
 /*
- * public static ArrayList<Integer> findSubstring(String a, final List<String> b) {
+ * public ArrayList<Integer> findSubstring(String a, final List<String> b) {
         ArrayList<Integer> result = new ArrayList<Integer>();        
         if(b.size() == 0) 
             return result;
@@ -107,17 +107,29 @@ public static ArrayList<Integer> findSubstring(String a, final List<String> b) {
         }
         return result;            
     }
-     public static boolean check(String s, int l, int n, HashMap<String, Integer> map){
-        String temp;
-        for(int i =0; i < n; i= i + l){
-            temp = s.substring(i, i + l);
-            if(map.containsKey(temp)){
-                if(map.get(temp) < 1)
-                    return false;
-                else
-                    map.put(temp, map.get(temp) - 1);
-            }                
-        }
-        return true;
+   public boolean check(String s, int l, int n, HashMap<String, Integer> map){
+     String checkWord=s;
+     System.out.println(checkWord);
+    String temp;
+    for(int i =0; i < n; i= i + l){
+        temp = s.substring(i, i + l);
+        if(map.containsKey(temp)){
+            // if(map.get(temp) < 1)
+            //     return false;
+            // else
+            map.put(temp, map.get(temp) - 1);
+        }                
     }
+    Iterator<Integer> keyVals=map.values().iterator();
+    boolean endResult=true;
+    while(keyVals.hasNext()){        
+        if(keyVals.next()==0){
+
+        }else{
+            endResult=false;
+            return endResult;            
+        }
+    }
+    return endResult;
+}
  */
